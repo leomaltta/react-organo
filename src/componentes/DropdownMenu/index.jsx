@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import './DropdownMenu.css';
+import './dropdown-menu.css';
 
-function DropdownMenu({ label, aoAlterado, required, valor, itens }) {
+function DropdownMenu({ label, aoAlterado, required, valor, items }) {
   return (
     <div className="lista-suspensa">
       <label>{label}</label>
@@ -13,7 +13,7 @@ function DropdownMenu({ label, aoAlterado, required, valor, itens }) {
       >
         <option value="" />
 
-        {itens.map((item) => (
+        {items.map((item) => (
           <option key={item}>{item}</option>
         ))}
       </select>

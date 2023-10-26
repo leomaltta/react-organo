@@ -1,9 +1,9 @@
-import './Botao.css';
+import './botao.css';
 
-function Botao({ children }) {
+function Botao({ texto }) {
   return (
     <button type="submit" className="botao">
-      {children}
+      {texto}
     </button>
   );
 }
