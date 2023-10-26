@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import './CampoTexto.css';
+import './campo-texto.css';
 
 function CampoTexto({ aoAlterado, label, valor, required, placeholder }) {
   const aoDigitado = (evento) => {

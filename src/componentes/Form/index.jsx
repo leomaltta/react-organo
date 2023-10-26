@@ -2,17 +2,17 @@ import { useState } from 'react';
 import Botao from '../Botao';
 import CampoTexto from '../CampoTexto';
 import DropdownMenu from '../DropdownMenu';
-import './Form.css';
+import './form.css';
 
-function Form({ aoColaboradorCadastrado, timesNome }) {
+function Form({ aoCadastrar, times }) {
   const [nome, setNome] = useState('');
   const [cargo, setCargo] = useState('');
   const [imagem, setImagem] = useState('');
   const [time, setTime] = useState('');
 
-  const aoSalvar = (evento) => {
+  const aoSubmeter = (evento) => {
     evento.preventDefault();
-    aoColaboradorCadastrado({
+    aoCadastrar({
       nome,
       cargo,
       imagem,
@@ -25,8 +25,8 @@ function Form({ aoColaboradorCadastrado, timesNome }) {
   };
 
   return (
-    <section className="form">
-      <form onSubmit={aoSalvar}>
+    <section className="formulario-container">
+      <form className="formulario" onSubmit={aoSubmeter}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
         <CampoTexto
           required
@@ -43,6 +43,7 @@ function Form({ aoColaboradorCadastrado, timesNome }) {
           aoAlterado={(valor) => setCargo(valor)}
         />
         <CampoTexto
+          required
           label="Imagem"
           placeholder="Digite o endereço da imagem"
           valor={imagem}
@@ -53,9 +54,9 @@ function Form({ aoColaboradorCadastrado, timesNome }) {
           aoAlterado={(valor) => setTime(valor)}
           required
           label="Time"
-          itens={timesNome}
+          items={times}
         />
-        <Botao>Criar Card</Botao>
+        <Botao texto="Criar card" />
       </form>
     </section>
   );
