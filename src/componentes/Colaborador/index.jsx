@@ -1,9 +1,9 @@
 import './Colaborador.css';
 
-function Colaborador({ imagem, nome, cargo }) {
+function Colaborador({ imagem, nome, cargo, corDeFundo }) {
   return (
     <div className="colaborador">
-      <div className="cabecalho">
+      <div className="cabecalho" style={{backgroundColor: corDeFundo}}>
         <img src={imagem} alt={nome} />
       </div>
       <div className="rodape">
