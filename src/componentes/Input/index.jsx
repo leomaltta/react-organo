@@ -1,15 +1,23 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import './campo-texto.css';
+import './input.css';
 
-function CampoTexto({ aoAlterado, label, valor, required, placeholder }) {
+function Input({
+  type = 'text',
+  aoAlterado,
+  label,
+  valor,
+  required,
+  placeholder,
+}) {
   const aoDigitado = (evento) => {
     aoAlterado(evento.target.value);
   };
 
   return (
-    <div className="campo-texto">
+    <div className="input">
       <label>{label}</label>
       <input
+        type={type}
         value={valor}
         onChange={aoDigitado}
         required={required}
@@ -19,4 +27,4 @@ function CampoTexto({ aoAlterado, label, valor, required, placeholder }) {
   );
 }
 
-export default CampoTexto;
+export default Input;
