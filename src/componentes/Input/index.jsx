@@ -14,7 +14,7 @@ function Input({
   };
 
   return (
-    <div className="input">
+    <div className={`input input-${type}`}>
       <label>{label}</label>
       <input
         type={type}

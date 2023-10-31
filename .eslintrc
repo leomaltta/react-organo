@@ -20,6 +20,7 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "arrow-body-style": ["error", "as-needed"]
+    "arrow-body-style": ["error", "as-needed"],
+    "no-param-reassign": "off"
   }
 }
